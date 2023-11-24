@@ -58,7 +58,7 @@ const login=async(req,res,next)=>{
 
         res.cookie("jwt",token,{
            withCredential:true,
-           httpOnly:false,
+           httpOnly:true,
            maxAge:maxAge * 1000
         })
 
@@ -110,7 +110,7 @@ const register=async(req,res,next)=>{
 
          res.cookie("jwt",token,{
             withCredentials:true,
-            httpOnly:false,
+            httpOnly:true,
             maxAge:maxAge * 1000
          })
 

@@ -43,7 +43,7 @@ DELETE /user/:id: Delete a user account based on their ID (admin functionality).
 Setup Instructions
 To run this backend server locally or on a server:
 
-Clone the repository: git clone https://github.com/your-username/your-repo.git
+Clone the repository: git clone (https://github.com/MouliSri/Mern-Stack-Air-Conditioner-Backend.git)
 Install dependencies: npm install
 Set up environment variables (if any).
 Run the server: npm start or node index.js

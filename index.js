@@ -25,7 +25,7 @@ app.use(express.json())
 
 // cross origin 
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:"https://advancedairconditioner.netlify.app",
     methods:["GET","POST","PUT","DELETE"],
     credentials:true
 }))

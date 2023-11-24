@@ -114,6 +114,8 @@ const register=async(req,res,next)=>{
             maxAge:maxAge * 1000
          })
 
+        
+
          return res.status(201).json({user:user.name,created:true})
         
     } catch (error) {

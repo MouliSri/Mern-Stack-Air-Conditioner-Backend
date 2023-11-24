@@ -7,22 +7,24 @@ const {
 } = require('../Controller/CartController');
 const { verifyToken } = require('../middleware/AuthMiddleWare');
 
+const {setCorsHeaders} =require("../middleware/CorsMiddleWare")
+
 // Get particular user's cart
-router.get('/', verifyToken, getParticularUserCart);
+router.get('/',setCorsHeaders, verifyToken, getParticularUserCart);
 
 // Add item to cart
-router.post('/addToCart', verifyToken, AddToCart);
+router.post('/addToCart', setCorsHeaders,verifyToken, AddToCart);
 
 // Delete a single cart item
-router.delete('/deleteCartItem/:id', verifyToken, deleteCartItem);
+router.delete('/deleteCartItem/:id',setCorsHeaders, verifyToken, deleteCartItem);
 
 // Delete all cart items for a user
-router.delete('/deleteAllCartItems', verifyToken, deleteAllCartItemsForUser);
+router.delete('/deleteAllCartItems', setCorsHeaders,verifyToken, deleteAllCartItemsForUser);
 
 
-router.put("/updateCartItem/:id",verifyToken,updateCart)
+router.put("/updateCartItem/:id",setCorsHeaders,verifyToken,updateCart)
 
 
-router.get("/checkCartItem/:productId",verifyToken,checkCartItem)
+router.get("/checkCartItem/:productId",setCorsHeaders,verifyToken,checkCartItem)
 
 module.exports = router;
